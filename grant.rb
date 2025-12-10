@@ -5,21 +5,21 @@
 class Grant < Formula
   desc "A tool consumes SBOMS and details license information"
   homepage "https://github.com/anchore/grant"
-  version "0.5.1"
+  version "0.5.2"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anchore/grant/releases/download/v0.5.1/grant_0.5.1_darwin_amd64.tar.gz"
-      sha256 "867163ea680115bf50fa9875fd69539dbdc715f590067995d037bcd4dbc08cb1"
+      url "https://github.com/anchore/grant/releases/download/v0.5.2/grant_0.5.2_darwin_amd64.tar.gz"
+      sha256 "5cb0eeb1a895a7dc0ce95c194041bf303c60f89e1d2960c58e3e145b4aba3d92"
 
       def install
         bin.install "grant"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/anchore/grant/releases/download/v0.5.1/grant_0.5.1_darwin_arm64.tar.gz"
-      sha256 "15f43c97040c3d0852591a5387ce75451baa306027e8709e309911fd4d33e6ec"
+      url "https://github.com/anchore/grant/releases/download/v0.5.2/grant_0.5.2_darwin_arm64.tar.gz"
+      sha256 "d5aaf073f5a453c4a3bb3565664edbfdcbc6d79acafdd91a50a15351c58a4eb3"
 
       def install
         bin.install "grant"
@@ -29,15 +29,15 @@ class Grant < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anchore/grant/releases/download/v0.5.1/grant_0.5.1_linux_amd64.tar.gz"
-      sha256 "8273e77a0101a1f28a0a0721478c6e07aa1906cc848f0952e9fbf6870da7cd14"
+      url "https://github.com/anchore/grant/releases/download/v0.5.2/grant_0.5.2_linux_amd64.tar.gz"
+      sha256 "e2996cb02d320666bed08b71c02129ed6f7518c94108fa5df0b5a96d45c9d7d5"
       def install
         bin.install "grant"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anchore/grant/releases/download/v0.5.1/grant_0.5.1_linux_arm64.tar.gz"
-      sha256 "c9d4cf289605d2b0c9be6c44c6fee4f4ff41ddcc7b289dbc120a4acd3bb593f7"
+      url "https://github.com/anchore/grant/releases/download/v0.5.2/grant_0.5.2_linux_arm64.tar.gz"
+      sha256 "36346eed31fde5ff49aead3f459aa06658b423cd985d7994b00788b8956f1893"
       def install
         bin.install "grant"
       end
