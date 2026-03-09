@@ -5,23 +5,23 @@
 class Grant < Formula
   desc "A tool consumes SBOMS and details license information"
   homepage "https://github.com/anchore/grant"
-  version "0.6.2"
+  version "0.6.3"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anchore/grant/releases/download/v0.6.2/grant_0.6.2_darwin_amd64.tar.gz"
-      sha256 "cb09761b859be34cab0db2f2d58dd2fd64493896add16c5ace4c3eb743a73459"
+      url "https://github.com/anchore/grant/releases/download/v0.6.3/grant_0.6.3_darwin_amd64.tar.gz"
+      sha256 "2e681f737c6d0f3af23190688cb5f718d75a4a431d44f170064855e2e5c43806"
 
-      def install
+      define_method(:install) do
         bin.install "grant"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/anchore/grant/releases/download/v0.6.2/grant_0.6.2_darwin_arm64.tar.gz"
-      sha256 "2a724730b0783ad161a3e421cd7be1284e275f03faac3379b3d3294806f9815e"
+      url "https://github.com/anchore/grant/releases/download/v0.6.3/grant_0.6.3_darwin_arm64.tar.gz"
+      sha256 "ab3f137fcc49442a536d8c182de7215d8e32f3c77d05c0ba5d394278f725aee1"
 
-      def install
+      define_method(:install) do
         bin.install "grant"
       end
     end
@@ -29,16 +29,16 @@ class Grant < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anchore/grant/releases/download/v0.6.2/grant_0.6.2_linux_amd64.tar.gz"
-      sha256 "5bee279ca5847126af2335cbcbc14e546a2e65ab2b88cc0a5fce74622f6de11c"
-      def install
+      url "https://github.com/anchore/grant/releases/download/v0.6.3/grant_0.6.3_linux_amd64.tar.gz"
+      sha256 "bc5cffc04363ba16f769379f6fc1e9b0aecfc218a7a097d1fd5d73e376936dc8"
+      define_method(:install) do
         bin.install "grant"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anchore/grant/releases/download/v0.6.2/grant_0.6.2_linux_arm64.tar.gz"
-      sha256 "3f0b21832ccd345ebc48041e3e46334c1ee6b9d129c18a794274546c36404127"
-      def install
+      url "https://github.com/anchore/grant/releases/download/v0.6.3/grant_0.6.3_linux_arm64.tar.gz"
+      sha256 "c6e48fab3cb70cb5787b606eb51b2a0c8b261add48ea4f9f4806ff9aca58e224"
+      define_method(:install) do
         bin.install "grant"
       end
     end
