@@ -5,21 +5,21 @@
 class Grant < Formula
   desc "A tool consumes SBOMS and details license information"
   homepage "https://github.com/anchore/grant"
-  version "0.7.0"
+  version "0.7.1"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anchore/grant/releases/download/v0.7.0/grant_0.7.0_darwin_amd64.tar.gz"
-      sha256 "f64225cc75666fda4161bbd7b8f29adc58d9c4ab07816d87ea0789c7b8663313"
+      url "https://github.com/anchore/grant/releases/download/v0.7.1/grant_0.7.1_darwin_amd64.tar.gz"
+      sha256 "8dbe6dc487343583431ec42287f36d2652f723e0d55f1a73f4a550caf05e679a"
 
       define_method(:install) do
         bin.install "grant"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/anchore/grant/releases/download/v0.7.0/grant_0.7.0_darwin_arm64.tar.gz"
-      sha256 "52ee648d48cdfa1a4cb76914a22cbd5e93901d49f976f3cb978f67f761eada99"
+      url "https://github.com/anchore/grant/releases/download/v0.7.1/grant_0.7.1_darwin_arm64.tar.gz"
+      sha256 "abf7fc521cf072b9d8b413e247c885304c6fb2750d2746b0204bb4c0fc9732e7"
 
       define_method(:install) do
         bin.install "grant"
@@ -29,15 +29,15 @@ class Grant < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anchore/grant/releases/download/v0.7.0/grant_0.7.0_linux_amd64.tar.gz"
-      sha256 "8c024fbb2d17c4f87b4463752f164e2b7734ddf1e99b963f9827c62d57b7b03f"
+      url "https://github.com/anchore/grant/releases/download/v0.7.1/grant_0.7.1_linux_amd64.tar.gz"
+      sha256 "e02123ea9286611d01ba5ff2d71ba34227991402ac5aa668dc1d1f40573825f7"
       define_method(:install) do
         bin.install "grant"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anchore/grant/releases/download/v0.7.0/grant_0.7.0_linux_arm64.tar.gz"
-      sha256 "071d575dbe3d4262e2370c7e37fef204847a8a0ca20daef06454c70350591e79"
+      url "https://github.com/anchore/grant/releases/download/v0.7.1/grant_0.7.1_linux_arm64.tar.gz"
+      sha256 "cc086082418d375cb7814e510a18fed5fe592164273099595c6672bca8957dfd"
       define_method(:install) do
         bin.install "grant"
       end
